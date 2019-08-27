@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lbIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculo IMC"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/lbPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso"
+        android:layout_alignBaseline="@id/edPeso"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/edPeso"
+        android:hint="Peso em kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbPeso"
+        android:layout_below="@id/lbIMC"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/lbAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altura"
+        android:layout_alignBaseline="@id/edAltura"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/edAltura"
+        android:hint="Altura em metros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edPeso"
+        android:layout_toRightOf="@id/lbAltura"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/lbIMCResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMC"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:layout_below="@id/edAltura"/>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbIMCResult"
+        android:layout_centerHorizontal="true"
+        android:text="Calcula imc"
+        android:onClick="calculaImc"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Créditos"
+        android:layout_alignParentBottom="true"
+        android:onClick="abrirCreditos"/>
+</RelativeLayout>
